@@ -26,6 +26,10 @@ public class numberbaseball {
 	}
 
 	public static void main(String[] args) {
+		start();
+	}
+	
+	public static void start() {
 		int[] answer = { 10, 10, 10 }; //warining for default value 10
 		int[] ask = { 0, 0, 0 };
 		int[] ask2 = { 0, 0, 0 };
@@ -90,9 +94,9 @@ public class numberbaseball {
 			int j2 = (int) ((Math.random() * 10) % 3);
 			if (j == j2)
 				continue;
-			if (ask[0]==0) continue;
 			ask[j] = ask2[j2];
 			ask[j2] = ask2[j];
+			if (ask[0]==0) continue;
 			for (int i = 0; i < 3; i++) {
 				ask2[i] = ask[i];
 			}
