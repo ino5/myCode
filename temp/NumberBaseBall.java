@@ -38,6 +38,7 @@ public class numberbaseball {
 		int currentStep=0;
 		final int[] YOUR_NUMBER = new int[3];
 		int YOUR_NUMBER_temp;
+		int count = 0;
 		
 		//save YOUR_NUMBER
 		System.out.print("What is your number : ");
@@ -67,8 +68,7 @@ public class numberbaseball {
 
 			S = checkStrike(YOUR_NUMBER, ask);	
 			B = checkBall(YOUR_NUMBER, ask);
-			System.out.print("S/B : "+S);
-			System.out.println("/"+B);
+			System.out.println("check, S/B, count : "+ask[0]+ask[1]+ask[2]+", "+S+"/"+B+", "+(++count));
 			if(B>0) {
 				for(int i=0; i<3; i++) {
 					ask2[i]=ask[i];
@@ -100,8 +100,7 @@ public class numberbaseball {
 
 			S = checkStrike(YOUR_NUMBER, ask);	
 			B = checkBall(YOUR_NUMBER, ask);
-			System.out.print("S/B : "+S);
-			System.out.println("/"+B);
+			System.out.println("check, S/B, count : "+ask[0]+ask[1]+ask[2]+", "+S+"/"+B+", "+(++count));
 			if(B==0) {		
 				S2=S;
 				break;			
@@ -127,8 +126,7 @@ public class numberbaseball {
 
 			S = checkStrike(YOUR_NUMBER, ask);	
 			B = checkBall(YOUR_NUMBER, ask);
-			System.out.print("S/B : "+S);
-			System.out.println("/"+B);
+			System.out.println("check, S/B, count : "+ask[0]+ask[1]+ask[2]+", "+S+"/"+B+", "+(++count));
 			if(S==S2-1) {
 				answer[i2]=ask2[i2];
 				break;			
@@ -159,8 +157,7 @@ public class numberbaseball {
 
 			S = checkStrike(YOUR_NUMBER, ask);	
 			B = checkBall(YOUR_NUMBER, ask);
-			System.out.print("S/B : "+S);
-			System.out.println("/"+B);
+			System.out.println("check, S/B, count : "+ask[0]+ask[1]+ask[2]+", "+S+"/"+B+", "+(++count));
 			if(B>0) {
 				for(int i=0; i<3; i++) {
 					ask2[i]=ask[i];
@@ -188,13 +185,9 @@ public class numberbaseball {
 			for(int i=0; i<3; i++) {
 				ask2[i]=ask[i];	
 			}			
-			System.out.println("check : "+ask[0]+ask[1]+ask[2]);
-
-
 			S = checkStrike(YOUR_NUMBER, ask);	
 			B = checkBall(YOUR_NUMBER, ask);
-			System.out.print("S/B : "+S);
-			System.out.println("/"+B);
+			System.out.println("check, S/B, count : "+ask[0]+ask[1]+ask[2]+", "+S+"/"+B+", "+(++count));
 			if(S>=2 && B==0) {		
 				S2=S;
 				break;			
@@ -216,13 +209,10 @@ public class numberbaseball {
 				}
 			}
 			
-			System.out.println("check : "+ask[0]+ask[1]+ask[2]);
-
 
 			S = checkStrike(YOUR_NUMBER, ask);	
 			B = checkBall(YOUR_NUMBER, ask);
-			System.out.print("S/B : "+S);
-			System.out.println("/"+B);
+			System.out.println("check, S/B, count : "+ask[0]+ask[1]+ask[2]+", "+S+"/"+B+", "+(++count));
 			if(S==S2-1) {
 				answer[i2]=ask2[i2];
 				break;			
@@ -237,7 +227,8 @@ public class numberbaseball {
 			System.out.println("Step"+currentStep);
 		}
 		while (true) {
-			while (true) {
+			if(S==3) break;
+			while (true) {	
 				for(int i=0; i<3; i++) {
 					ask[i]=(int)(Math.random()*10);
 					if(answer[i]<10)ask[i]=answer[i];					
@@ -247,13 +238,9 @@ public class numberbaseball {
 				}
 			}
 
-			System.out.println("check : "+ask[0]+ask[1]+ask[2]);
-
-
 			S = checkStrike(YOUR_NUMBER, ask);	
 			B = checkBall(YOUR_NUMBER, ask);
-			System.out.print("S/B : "+S);
-			System.out.println("/"+B);
+			System.out.println("check, S/B, count : "+ask[0]+ask[1]+ask[2]+", "+S+"/"+B+", "+(++count));
 			if(S==3) {
 				for(int i=0; i<3; i++) {
 					ask2[i]=ask[i];
