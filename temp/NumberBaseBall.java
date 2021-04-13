@@ -63,7 +63,6 @@ public class numberbaseball {
 				}
 			}
 
-			System.out.println("check : "+ask[0]+ask[1]+ask[2]);
 
 
 			S = checkStrike(YOUR_NUMBER, ask);	
@@ -95,7 +94,7 @@ public class numberbaseball {
 			for(int i=0; i<3; i++) {
 				ask2[i]=ask[i];	
 			}			
-			System.out.println("check : "+ask[0]+ask[1]+ask[2]);
+
 
 
 			S = checkStrike(YOUR_NUMBER, ask);	
@@ -121,7 +120,7 @@ public class numberbaseball {
 				}
 			}
 			
-			System.out.println("check : "+ask[0]+ask[1]+ask[2]);
+
 
 
 			S = checkStrike(YOUR_NUMBER, ask);	
@@ -151,8 +150,6 @@ public class numberbaseball {
 					break;	
 				}
 			}
-
-			System.out.println("check : "+ask[0]+ask[1]+ask[2]);
 
 
 			S = checkStrike(YOUR_NUMBER, ask);	
